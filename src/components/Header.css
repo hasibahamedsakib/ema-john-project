@@ -1,0 +1,24 @@
+.header {
+  background-color: #1c2b35;
+  color: white;
+  padding: 10px 15px;
+  width: 100%;
+}
+
+.nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1280px;
+
+  margin: 0 auto;
+}
+.nav-link {
+  display: flex;
+  gap: 40px;
+}
+
+.nav-link > a {
+  text-decoration: none;
+  color: #fff;
+}
