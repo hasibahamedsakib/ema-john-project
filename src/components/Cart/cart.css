@@ -1,0 +1,14 @@
+.order-summary {
+  background: #f8a221;
+  color: #fff;
+  padding: 20px 10px;
+  height: 100vh;
+}
+
+.order-summary > div {
+  margin-top: 30px;
+}
+.order-summary > h1,
+h3 {
+  font-weight: 500;
+}
