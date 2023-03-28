@@ -1,6 +1,6 @@
 import React from "react";
 import logo from "../../images/Logo.svg";
-import "../Header.css";
+import "./Header.css";
 
 const Header = () => {
   return (
@@ -10,7 +10,7 @@ const Header = () => {
 
         <div className="nav-link">
           <a href="/order">Order</a>
-          <a href="/order-review">Order Review</a>
+          <a href="/order-review">Orders Review</a>
           <a href="/manage-inventory">Manage Inventory</a>
           <a href="/login">LogIn</a>
         </div>
