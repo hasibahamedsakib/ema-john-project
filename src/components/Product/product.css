@@ -52,7 +52,35 @@
   bottom: 0;
   border: none;
   cursor: pointer;
+  position: relative;
+  transition-duration: 0.4s;
 }
 .product-container > button:hover {
-  background: #ffd79a;
+  background: #ffd089;
+}
+
+.product-container > button::after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 4em;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all 0.5s;
+  box-shadow: 0 0 10px 40px rgb(216, 223, 20);
+}
+.product-container > button:active::after {
+  box-shadow: 0 0 0 0 rgb(130, 225, 15);
+  position: absolute;
+  border-radius: 4em;
+  left: 0;
+  top: 0;
+  opacity: 1;
+  transition: 0s;
+}
+.product-container > button:active {
+  top: 1px;
 }

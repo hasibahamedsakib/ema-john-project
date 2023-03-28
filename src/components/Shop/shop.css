@@ -8,3 +8,16 @@
   margin: 120px 90px;
   gap: 45px;
 }
+.order-summary {
+  background: #f8a221;
+  color: #fff;
+  padding: 20px 10px;
+}
+
+.order-summary > div {
+  margin-top: 30px;
+}
+.order-summary > h1,
+h3 {
+  font-weight: 500;
+}
