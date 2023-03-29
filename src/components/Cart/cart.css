@@ -1,12 +1,16 @@
 .order-summary {
-  background: #f8a221;
-  color: #fff;
+  /* background: #ff9900; */
+  background: rgba(255, 153, 0, 0.3);
   padding: 20px 10px;
   height: 100vh;
+  position: sticky;
+  top: 0;
 }
 
 .order-summary > div {
   margin-top: 30px;
+  color: black;
+  opacity: 100;
 }
 .order-summary > h1,
 h3 {
