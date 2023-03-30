@@ -1,6 +1,9 @@
 import React from "react";
 import "./cart.css";
 const Cart = ({ cart }) => {
+  // local storage part
+  
+
   let totalShipping = 0;
   let totalPrice = 0;
   for (const product of cart) {

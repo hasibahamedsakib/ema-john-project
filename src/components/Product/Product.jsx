@@ -1,10 +1,11 @@
-import { faCartPlus } from "@fortawesome/free-solid-svg-icons";
+import { faCartPlus, faEraser } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import "./product.css";
 const shoppingCart = <FontAwesomeIcon icon={faCartPlus} />;
+const DeleteLeft = <FontAwesomeIcon icon={faEraser} />;
 
-const Product = ({ product, handleClick }) => {
+const Product = ({ product, handleClick, removeClick }) => {
   const { img, name, price, ratings, seller } = product;
 
   return (
@@ -21,7 +22,10 @@ const Product = ({ product, handleClick }) => {
         </div>
       </div>
       <button onClick={() => handleClick(product)}>
-        Add to Cart {shoppingCart}{" "}
+        Add to Cart {shoppingCart}
+      </button>
+      <button onClick={() => removeClick(product.id)}>
+        Remove to cart {DeleteLeft}
       </button>
     </div>
   );
