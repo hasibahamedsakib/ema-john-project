@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { addToDb } from "../../utilities/fakedb";
+import { addToDb, getShoppingCart } from "../../utilities/fakedb";
 import Cart from "../Cart/Cart";
 import Product from "../Product/Product";
 import "./shop.css";
@@ -19,20 +19,26 @@ const Shop = () => {
     setCart(newCart);
     addToDb(product.id);
   };
+  useEffect(() => {
+    const saveCart = [];
+    const storeCart = getShoppingCart();
+    for (let id in storeCart) {
+      const findProductObj = products.find((pd) => pd?.id === id);
+      if (findProductObj) {
+        const storeQuantity = storeCart[id];
+        findProductObj.quantity = storeQuantity;
+
+        saveCart.push(findProductObj);
+      }
+    }
+    setCart(saveCart);
+  }, [products]);
+
   const removeClick = (id) => {
     // get shopping cart
     let getShoppingCart = JSON.parse(localStorage.getItem("shopping-cart"));
 
-    if (getShoppingCart) {
-      getShoppingCart.slice(getShoppingCart.find((pd) => pd.id === id).id, 1);
-      localStorage.setItem("shopping-cart", JSON.stringify(getShoppingCart));
-
-      // let shoppingCart = JSON.parse(getShoppingCart);
-      // if (id in shoppingCart) {
-      //   delete shoppingCart[id];
-      //   localStorage.setItem("shopping-cart", JSON.stringify(shoppingCart));
-      // }
-    }
+    alert(`product delete function is coming`, id);
   };
 
   return (
