@@ -1,6 +1,6 @@
 .order-summary {
   /* background: #ff9900; */
-  background: rgba(255, 153, 0, 0.3);
+  background: #ffe0b2;
   padding: 20px 10px;
   height: 100vh;
   position: sticky;
@@ -24,4 +24,12 @@ h3 {
 
 .product-dec {
   margin: 100px 120px;
+}
+
+.product-Calculation {
+  margin: 80px 120px;
+  padding: 30px;
+  border-radius: 8px;
+  position: sticky;
+  background-color: #ffe0b2;
 }
