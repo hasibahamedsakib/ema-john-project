@@ -16,3 +16,12 @@
 h3 {
   font-weight: 500;
 }
+
+.orderPage {
+  display: flex;
+  justify-content: space-between;
+}
+
+.product-dec {
+  margin: 100px 120px;
+}

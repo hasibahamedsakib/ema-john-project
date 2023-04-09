@@ -1,0 +1,22 @@
+.reviewItem {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid gray;
+  border-radius: 8px;
+  width: 560px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.item-img {
+  width: 110px;
+
+  margin-right: 10px;
+}
+.item-img > img {
+  width: 100px;
+  border-radius: 10px;
+}
+.item-dec {
+  padding: 0px 10px;
+}
