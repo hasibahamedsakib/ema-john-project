@@ -1,3 +1,5 @@
+import { faCreditCard } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import { deleteShoppingCart, removeFromDb } from "../../utilities/fakedb";
@@ -27,7 +29,30 @@ const Order = () => {
         ))}
       </div>
       <div className="product-Calculation">
-        <Cart cart={cart} clearCart={handleClearCart} />
+        <Cart cart={cart} clearCart={handleClearCart}>
+          <button
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+              height: "40px",
+              width: "100%",
+              fontSize: "22px",
+              backgroundColor: "#ff9900",
+              padding: "10px",
+              border: "none",
+              borderRadius: "5px",
+              color: "white",
+              marginTop: "15px",
+            }}
+          >
+            Proceed Checkout
+            <FontAwesomeIcon
+              onClick={() => deleteItem(product.id)}
+              icon={faCreditCard}
+            />{" "}
+          </button>
+        </Cart>
       </div>
     </div>
   );

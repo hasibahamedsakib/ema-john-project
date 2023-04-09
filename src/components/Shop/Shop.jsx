@@ -1,5 +1,11 @@
+import { faCreditCard } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useEffect, useState } from "react";
-import { addToDb, getShoppingCart } from "../../utilities/fakedb";
+import {
+  addToDb,
+  deleteShoppingCart,
+  getShoppingCart,
+} from "../../utilities/fakedb";
 import Cart from "../Cart/Cart";
 import Product from "../Product/Product";
 import "./shop.css";
@@ -40,6 +46,10 @@ const Shop = () => {
 
     alert(`product delete function is coming`, id);
   };
+  const handleClearCart = () => {
+    setCart([]);
+    deleteShoppingCart();
+  };
 
   return (
     <div className="shop-container">
@@ -54,7 +64,30 @@ const Shop = () => {
         ))}
       </div>
       <div className="Cart-container">
-        <Cart cart={cart} />
+        <Cart cart={cart} clearCart={handleClearCart}>
+          <button
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+              height: "40px",
+              width: "100%",
+              fontSize: "22px",
+              backgroundColor: "#ff9900",
+              padding: "10px",
+              border: "none",
+              borderRadius: "5px",
+              color: "white",
+              marginTop: "15px",
+            }}
+          >
+            Review Order{" "}
+            <FontAwesomeIcon
+              onClick={() => deleteItem(product.id)}
+              icon={faCreditCard}
+            />{" "}
+          </button>
+        </Cart>
       </div>
     </div>
   );
